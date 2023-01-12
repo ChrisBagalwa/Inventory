@@ -1,3 +1,12 @@
 # Inventory
 This program reads from the text file inventory.txt and gets an overview of what each stock-taking session entailed
 # Description
+This program is designed to read data from a text file named inventory.txt and perform a variety of actions on the data to prepare it for presentation to managers. The program is written in Python and makes use of several class and function definitions to accomplish its tasks.
+
+The program begins by defining a Shoe class with the following attributes: country, code, product, cost, Quantity. The class also includes several methods for interacting with the data: get_cost(), get_quanty() and __str__(). get_cost() returns the cost of the shoe, get_quanty() returns the quantity of the shoes and __str__() returns a string representation of the class, allowing the shoe's data to be easily printed to the console.
+
+The program also defines a variable with an empty list, which will be used to store a list of Shoe objects. This list will be populated as the program reads data from the inventory.txt file and creates Shoe objects.
+
+The program includes several functions that perform specific tasks: read_shoes_data(), capture_shoes(), view_all(), re_stock(), seach_shoe(), value_per_item(), highest_qty(). read_shoes_data() opens the file inventory.txt and reads the data, creating Shoe objects and appending them to the shoes list. capture_shoes() allows a user to capture data about a shoe and create a Shoe object, appending it to the shoes list. view_all() iterates over the shoes list and prints the details of the shoes using the __str__() function. re_stock() finds the shoe with the lowest quantity and asks the user if they want to add to its quantity, updating the file for that shoe. seach_shoe() searches for a shoe by code and returns the object. value_per_item() calculates the total value (cost * quantity) for each item and prints it to the console. highest_qty() determines the product with the highest quantity and prints it as being for sale.
+
+The program's main function includes a menu that allows the user to execute each of the above functions. The menu is presented in a while loop, allowing the user to make multiple selections and perform multiple tasks without having to restart the program. It's important to note that the user must have the inventory.txt file in the same directory as the program and it should have proper data as per the class attributes otherwise program will not work as expected.
